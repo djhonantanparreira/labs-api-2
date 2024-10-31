@@ -12,16 +12,16 @@ class PermissionUserController extends Controller
     {
         $user = User::query()->where('uuid', $uuid)->first();
 
-        if (is_null($user)) {
+        if (!$user) {
             return response()->json([
-                'erro' => 'Usuário não encontrado.',
+                'error' => 'Usuário não encontrado.',
             ], 404);
         }
 
         if ($user->permission !== 'admin') {
             return response()->json(
                 [
-                    'erro' => 'Você não tem permissão para atualizar este produto.',
+                    'error' => 'Você não tem permissão para atualizar este produto.',
                 ],
                 403
             );

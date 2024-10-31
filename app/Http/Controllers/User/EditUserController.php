@@ -12,10 +12,10 @@ class EditUserController extends Controller
     {
         $user = User::query()->where('uuid', $id)->first();
 
-        if (is_null($user)) {
+        if (!$user) {
 
             return response()->json([
-                'erro' => 'Usuário não encontrado.',
+                'error' => 'Usuário não encontrado.',
             ], 404);
         }
 

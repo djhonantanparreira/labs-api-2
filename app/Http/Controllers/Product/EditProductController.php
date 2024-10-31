@@ -14,17 +14,17 @@ class EditProductController extends Controller
 
         $product = Product::query()->where('uuid', $uuid)->first();
 
-        if (is_null($product)) {
+        if (!$product) {
 
             return response()->json([
-                'erro' => 'Produto não encontrado'
+                'error' => 'Produto não encontrado'
             ], 404);
         }
 
         if ($user->uuid !== $product->owner_uuid) {
 
             return response()->json([
-                'erro' => 'Você não tem permissão para atualizar esse produto'
+                'error' => 'Você não tem permissão para atualizar esse produto'
             ], 403);
         }
 
