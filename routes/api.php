@@ -13,18 +13,18 @@ use App\Http\Controllers\User\CreateUserController;
 use App\Http\Controllers\User\DeleteUserController;
 use App\Http\Controllers\Squad\CreateSquadController;
 use App\Http\Controllers\Squad\DeleteSquadController;
-use App\Http\Controllers\Members\EditMemberController;
-use App\Http\Controllers\Members\ListMemberController;
-use App\Http\Controllers\Members\ShowMemberController;
+use App\Http\Controllers\Member\EditMemberController;
+use App\Http\Controllers\Member\ListMemberController;
+use App\Http\Controllers\Member\ShowMemberController;
 use App\Http\Controllers\User\PermissionUserController;
-use App\Http\Controllers\Members\CreateMemberController;
-use App\Http\Controllers\Members\DeleteMemberController;
-use App\Http\Controllers\Products\EditProductController;
-use App\Http\Controllers\Products\ListProductController;
-use App\Http\Controllers\Products\ShowProductController;
-use App\Http\Controllers\Products\ActiveProductController;
-use App\Http\Controllers\Products\CreateProductController;
-use App\Http\Controllers\Products\DeleteProductController;
+use App\Http\Controllers\Member\CreateMemberController;
+use App\Http\Controllers\Member\DeleteMemberController;
+use App\Http\Controllers\Product\EditProductController;
+use App\Http\Controllers\Product\ListProductController;
+use App\Http\Controllers\Product\ShowProductController;
+use App\Http\Controllers\Product\ActiveProductController;
+use App\Http\Controllers\Product\CreateProductController;
+use App\Http\Controllers\Product\DeleteProductController;
 
 
 
