@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Members;
+namespace App\Http\Controllers\Member;
 
 use Ramsey\Uuid\Uuid;
 use App\Models\Member;
