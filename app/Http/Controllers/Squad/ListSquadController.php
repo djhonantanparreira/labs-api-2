@@ -8,12 +8,11 @@ use App\Http\Controllers\Controller;
 
 class ListSquadController extends Controller
 {
-    public function __invoke(string $productUuid = false)
+    public function __invoke(string $productUuid = '')
     {
         if (!empty($productUuid)) {
 
             $squad = Squad::query()->where('product_uuid', $productUuid)->first();
-
         } else {
 
             $squad = Squad::all();
