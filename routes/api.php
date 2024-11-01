@@ -126,6 +126,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 });
 
+Route::get('/products', [ListProductController::class, '__invoke'])
+    ->name('api.products.list');
+
 Route::post('/login', [AuthController::class, 'login'])
     ->name('api.login');
 
