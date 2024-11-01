@@ -10,7 +10,7 @@ class DeleteProductController extends Controller
 {
     public function __invoke(string $uuid)
     {
-        $product = Product::query()->where('uuid', $uuid);
+        $product = Product::query()->where('uuid', $uuid)->first();
 
         $user = auth()->user();
 
