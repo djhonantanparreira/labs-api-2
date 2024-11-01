@@ -25,6 +25,9 @@ class User extends Authenticatable
         'email',
         'password',
         'linkedin',
+        'discord',
+        'cidade',
+        'estado',
         'permission',
     ];
 

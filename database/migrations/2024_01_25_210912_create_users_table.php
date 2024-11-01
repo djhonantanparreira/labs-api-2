@@ -19,6 +19,9 @@ return new class extends Migration
                 $table->string('email', 60)->unique();
                 $table->string('password');
                 $table->string('linkedin')->nullable();
+                $table->string('discord')->nullable();
+                $table->string('cidade')->nullable();
+                $table->string('estado')->nullable();
                 $table->string('permission')->nullable();
                 $table->integer('active')->nullable()->default(1);
                 $table->rememberToken();

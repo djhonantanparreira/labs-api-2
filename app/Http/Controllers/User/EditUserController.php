@@ -21,7 +21,7 @@ class EditUserController extends Controller
 
         $request->validate([
 
-            'name' => ['string|max:60'],
+            'name' => ['string', 'max:60'],
             'email' => ['email'],
             'password' => ['min:8'],
 
@@ -35,10 +35,16 @@ class EditUserController extends Controller
         $email = $request->input('email');
         $name = $request->input('name');
         $linkedin = $request->input('linkedin');
+        $discord = $request->input('discord');
+        $cidade = $request->input('cidade');
+        $estado = $request->input('estado');
         $password = $request->input('password');
 
         $user->name = $name;
         $user->email = $email;
+        $user->cidade = $cidade;
+        $user->estado = $estado;
+        $user->discord = $discord;
         $user->linkedin = $linkedin;
 
         if ($password) {

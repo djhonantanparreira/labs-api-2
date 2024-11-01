@@ -55,7 +55,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
             ->name('api.user.permission');
 
         Route::put('/{id}', [EditUserController::class, '__invoke'])
-            ->where('id', '[0-9]+')
+            ->whereUuid('id')
             ->name('api.user.edit');
 
         Route::delete('/{id}', [DeleteUserController::class, '__invoke'])
