@@ -14,7 +14,7 @@ return new class extends Migration
         if (app()->isLocal()) {
             Schema::create('users', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->uuid('uuid');
+                $table->uuid('uuid')->unique();
                 $table->string('name', 60);
                 $table->string('email', 60)->unique();
                 $table->string('password');
